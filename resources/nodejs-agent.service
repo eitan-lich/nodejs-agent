@@ -1,0 +1,7 @@
+[Unit]
+
+
+[Service]
+ExecStart=/usr/bin/node /home/eitan/projects/nodejs-agent/index.js
+
+[Install]
