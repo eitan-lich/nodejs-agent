@@ -1,6 +1,6 @@
 {
   "name": "nodejs-agent",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Agent written in NodeJS to run in Linux machines",
   "main": "index.js",
   "scripts": { 
