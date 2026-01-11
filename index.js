@@ -1,10 +1,14 @@
 const express = require("express");
 const agentRoutes = require("./src/api/agentRoutes.js");
-const logApiCall = require("./src/api/middleware.js");
+const { logApiCall, validateApiKey } = require("./src/api/middleware.js");
+const { setApiKey } = require("./src/utils/authUtils.js");
+
+setApiKey();
 
 const app = express();
 
 app.use(logApiCall);
+app.use(validateApiKey)
 
 app.use("/agentRoutes", agentRoutes);
 
