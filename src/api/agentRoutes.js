@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const pkg = require("../../package.json");
 const { executeCommand } = require("../utils/terminalUtils");
-const { LINUX_COMMANDS } = require("../constants/linuxCommands");
+const { LINUX_COMMANDS } = require("../../constants/linuxCommands");
 
 router.get("/version", async (req, res) => {
   res.send(pkg.version);
