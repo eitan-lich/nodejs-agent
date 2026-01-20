@@ -1,7 +1,11 @@
 [Unit]
-
+Description=Node.js Agent Service
+After=network.target
 
 [Service]
 ExecStart=/usr/bin/node /home/eitan/projects/nodejs-agent/index.js
+Restart=Always
+RestartSec=5
 
 [Install]
+WantedBy=multi-user.target
